@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>３階からスーパーボールを投げよう</title>
+</head>
+<body>
+    <div class="main">
+        <h1>キムタクに挑戦するゲーム</h1>
+        <div class="explanation">
+            <p>真下に向かってスーパーボールを投げて上手くキャッチしよう</p>
+            <p>１回目のクリックでボールを投げ、２回目のクリックでキャッチします。</p>
+            <p>ロンバケのキムタクに挑戦してみよう！</p>
+        </div>
+        <br><br><br><br><br><br><br>
+        <div id="throwzone" @click="Click">
+            <img src="img/kintama.png" alt="kintama" :class="{kintama, animationbox, animationstop, block}">
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/main.js" charset="utf-8"></script>
+</html>

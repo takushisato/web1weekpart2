@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+html {
+    height: 100%;
+    text-align: center;
+}
+
+body {
+    max-width: 1440px;
+    background-color: lightgray;
+    height: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 0.6;
+    margin-top: 20px;
+}
+
+.main {
+    margin: 0 auto;
+    height: 100%;
+    background-image: url(../img/back.jpg);
+    background-position: 25% 75%;
+    background-size: auto;
+    height: 100%;
+    border: black 2px solid;
+    cursor: url(../img/migite_nagerumae.png), auto;
+    text-align: center;
+}
+
+.gauge {
+    margin-right: 20px;
+    text-align: right;
+}
+
+.explanation {
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.6);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#throwzone {
+    background-color: rgba(211, 211, 211, 0.3);
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.kintama {
+    margin: 0 auto;
+    width: 50px;
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.slide {
+    position: relative;
+    height: 100vh;
+}
+
+.animationbox{
+    animation-name: throwball-keyframes;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+
+.animationstop{
+    animation-play-state: paused;
+}
+/* animation-play-state: paused; は一時停止のCSSですが、今回はVueのcount変数と組み合わせ動かしているため一度しか発動しません。 */
+
+@keyframes throwball-keyframes {
+    0% {
+        transform: scale(0.1, 0.1);
+    }
+    100% {
+        transform: scale(30, 30);
+    }
+}
